@@ -1,0 +1,13 @@
+<li class="list-group-item w-100" [ngClass]="{'list-group-item-success': loveIts === 1, 'list-group-item-danger': loveIts === 0}">
+    <div style="font-size: x-large" class="d-flex justify-content-between text-2xl">
+        <div class="font-weight-bold">{{ title }}</div>
+        <div>{{ createdAt | date:'short' }}</div>
+    </div>
+    <p>
+        {{ content }}
+    </p>
+    <div>
+        <button class="btn btn-success mr-2" (click)="loveIt()">Love it ({{ countLoveIts }})</button>
+        <button class="btn btn-danger" (click)="dontLoveIt()">Don't Love it ({{ countDontLoveIts }})</button>
+    </div>
+</li>
